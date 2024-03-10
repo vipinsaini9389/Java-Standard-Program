@@ -1,28 +1,28 @@
  //Krishnamurthy Number Java
-import java.util.Scanner;
-public class Krishnamurthy{
-	public static void main(String []args){
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter A number:");		
-		int n,d,sum=0;
-		n=sc.nextInt();
-		
-		
-		for(int i=n;i>0;i=i/10){
-			d=i%10;
-			 int f=1;
-			for(int j=1;j<=d;j++){
-				f=f*j;
-				
-			}
-			sum=sum+f;
-		}
-		
-		if(sum==n){
-			System.out.println("Krishnamurthy number");
-		}
-		else{
-			System.out.println("Not Krishnamurthy");
-		}
-    }
-}
+ import java.util.Scanner;
+ public class Krishnamurthy{
+	 public static int fact(int num){
+		 int fact=1;
+		 for (int i=1;i<=num;i++){
+			 fact=fact*i;
+			 
+		 }
+		 return fact;
+	 }
+	 public static void main(String []args){
+		 Scanner sc=new Scanner (System.in);
+		 System.out.print("Enter A number ");
+		 int num=sc.nextInt();
+		 int sum=0;
+		 int temp=num;
+		 for(int m=0;m<num;num=num/10){
+			 sum=sum+fact(num%10);
+		 }
+		 if(sum==temp){
+			 System.out.println("Krishnamurthy Number");
+		 }
+		 else{
+			 System.out.println("Not Krishnamurthy Number");
+		 }
+	 }
+ }
