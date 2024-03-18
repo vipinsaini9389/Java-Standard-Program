@@ -1,5 +1,6 @@
+ //Java Program to Find Largest of Three Numbers
 import java.util.Scanner;
-public class LargestValue{
+public class LargestValueThree{
 	public static void main(String[]args){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter A three Number");
